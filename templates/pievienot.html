@@ -3,12 +3,15 @@
 {% block saturs %}
 
 
-<form>
+<form method="post">
     <input type="number">
+    <select id = "skolotajs" name = "skolotajs">
+        {% for viens in skolotaji %}
+        <option value = "{{viens[2]}}">{{viens[0]}} {{viens[1]}} </option>
+        {% endfor %}
+    </select>
     <select></select>
-    <select></select>
-    <input type="submit" value="Pievienot atzimi">
-
+    <input type="submit" value="Pievienot atzīmi!">
 </form>
 
 <table>
