@@ -1,16 +1,25 @@
-{% extends 'index.html' %}
+{% extends "index.html"%}
 
-{% block saturs%}
+{%block saturs%}
 
-<table>
-
+<table class="table">
     <tr>
-        <th>vārds</th>
-        <th>uzvārds</th>
-        <th>priekšmets</th>
+        <th>Vārds</th>
+        <th>Uzvārds</th>
+        <th>Priekšmets</th>
         <th>Vidējā atzīme</th>
     </tr>
 
+    {% for viens in dati %}
+    <tr>
+        <td>{{viens[0]}}</td>
+        <td>{{viens[1]}}</td>
+        <td>{{viens[2]}}</td>
+        <td>{{viens[3]}}</td>
+    </tr>
+    {%endfor%}
+    
 </table>
 
-{% endblock %}
+
+{%endblock%}
